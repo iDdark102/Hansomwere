@@ -2,12 +2,18 @@ import os
 from cryptography.fernet import Fernet
 #a
 files = []
+sure = False
 
-for files in os.listdir():
-    if files == 'thekey.key':
+for file in os.listdir():
+    if file == 'thekey.key':
+        print('entrou')
         sure = True
+        break
+    
+inp = 'y'    
 if sure:
-    inp = str(input('Documents alredy encrypted, want to do this again ? (y/n)'))
+    inp = 'n'
+    inp = str(input('Documents alredy encrypted, want to do this again ? you will lose all your files becouse they will be double incripted and you will lost the first key! if you realy want to double encrypt, make sure you will sava the first key \n want to double encrypt ?(y/n)\n'))
     
 if inp == 'y':
     for file in os.listdir():

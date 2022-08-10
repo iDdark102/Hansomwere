@@ -12,8 +12,6 @@ for file in os.listdir():
         if os.path.isfile(file):
             files.append(file)
 
-key = Fernet.generate_key()
-
 with open("thekey.key", 'rb') as key:
     secretkey = key.read()
     
@@ -24,3 +22,4 @@ for file in files:
     contents_decrypted = Fernet(secretkey).decrypt(contents)
     with open(file, "wb") as thefile:
         thefile.write(contents_decrypted)
+os.remove('thekey.key')
