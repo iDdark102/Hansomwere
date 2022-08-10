@@ -3,8 +3,6 @@ from cryptography.fernet import Fernet
 
 files = []
 
-#print(os.listdir())
-
 for file in os.listdir():
     if file == 'encrypt.py' or file == '.gitattributes' or file == 'README.md' or file == 'decrypt.py':
         continue

@@ -1,12 +1,12 @@
 import os
 from cryptography.fernet import Fernet
-#a
+
 files = []
 sure = False
 
 for file in os.listdir():
     if file == 'thekey.key':
-        print('entrou')
+        
         sure = True
         break
     
@@ -24,7 +24,6 @@ if inp == 'y':
                 files.append(file)
 
     key = Fernet.generate_key()
-    print(key)
 
     with open("thekey.key", "wb") as thekey:
         thekey.write(key)
