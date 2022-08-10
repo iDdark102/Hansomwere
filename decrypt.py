@@ -6,7 +6,7 @@ files = []
 #print(os.listdir())
 
 for file in os.listdir():
-    if file == 'valdemort.py' or file == '.gitattributes' or file == 'README.md':
+    if file == 'encrypt.py' or file == '.gitattributes' or file == 'README.md' or file == 'decrypt.py':
         continue
     if file != "thekey.key":
         if os.path.isfile(file):
